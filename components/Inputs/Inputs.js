@@ -2,31 +2,31 @@ import { View, TextInput } from "react-native"
 import { style } from "./Style"
 
 export const Inputs = {
-    Default() {
+    Default(props) {
         return (
             <View style={style.distance}>
-                <TextInput style={style.default} />
+                <TextInput placeholder={props.placeholder} onChangeText={props.onChangeText.bind()} style={style.default} />
             </View>
         )
     },
-    Filled() {
+    Filled(props) {
         return (
             <View style={style.distance}>
-                <TextInput style={style.filled} />
+                <TextInput placeholder={props.placeholder} onChangeText={props.onChangeText.bind()} style={style.filled} />
             </View>
         )
     },
-    Outlined() {
+    Outlined(props) {
         return (
             <View style={style.distance}>
-                <TextInput style={style.outlined} />
+                <TextInput placeholder={props.placeholder} onChangeText={props.onChangeText.bind()} style={style.outlined} />
             </View>
         )
     },
-    Shaped() {
+    Shaped(props) {
         return (
             <View style={style.distance}>
-                <TextInput style={style.shaped} />
+                <TextInput placeholder={props.placeholder} onChangeText={props.onChangeText.bind()} style={style.shaped} />
             </View>
         )
     }
