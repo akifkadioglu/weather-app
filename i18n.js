@@ -1,7 +1,6 @@
 import { getLocales } from 'expo-localization';
 import { I18n } from 'i18n-js';
 import { localeLanguage } from './locales/languages';
-import { storage } from './storage';
 
 
 function loadLocaleMessages() {
@@ -16,7 +15,18 @@ function loadLocaleMessages() {
     })
     return messages
 }
+
 export const i18n = new I18n(loadLocaleMessages());
 
 
-i18n.locale = getLocales()[0].languageCode == localeLanguage.ENGLISH ? localeLanguage.ENGLISH : localeLanguage.TURKISH
+switch (getLocales()[0].languageCode) {
+    case localeLanguage.ENGLISH:
+        i18n.locale = localeLanguage.ENGLISH
+        break;
+    case localeLanguage.TURKISH:
+        i18n.locale = localeLanguage.TURKISH
+        break;
+    default:
+        i18n.locale = localeLanguage.ENGLISH
+        break;
+}

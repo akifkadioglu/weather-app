@@ -1,6 +1,6 @@
 {
   "name": "weather-app",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -26,7 +26,6 @@
     "react-native": "0.70.5",
     "react-native-circular-progress-indicator": "^4.4.2",
     "react-native-dropdown-picker": "^5.4.4",
-    "react-native-i18n": "^2.0.15",
     "react-native-loading-spinner-overlay": "^3.0.1",
     "react-native-material-dropdown-v2-fixed": "^0.11.3",
     "react-native-reanimated": "~2.12.0",

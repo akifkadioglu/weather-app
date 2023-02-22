@@ -1,6 +1,5 @@
 import axios from 'axios';
-import { env } from '../env';
-
+import { env } from "../env"
 
 
 axios.defaults.headers.common["key"] = env.WEATHER_KEY;

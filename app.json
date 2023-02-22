@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "weather-app",
+    "name": "Weather App",
+    "description": "Simple weather app",
     "slug": "weather-app",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -14,9 +15,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
@@ -28,6 +27,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
+      "versionCode": 2,
       "package": "com.akifkadioglu.weatherapp"
     },
     "web": {

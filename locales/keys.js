@@ -6,5 +6,6 @@ export const keys = {
     TURKISH:            'turkish',
     GERMAN:             'german',
     ENTER_CITY_NAME:    'enter_city_name',
-    MAPS:               'maps'
+    MAPS:               'maps',
+    NOT_FOUND:          'not_found'
 }

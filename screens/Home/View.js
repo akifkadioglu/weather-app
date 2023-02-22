@@ -15,15 +15,14 @@ export default function Home() {
     const [isLoading, setLoading] = useState(false)
     async function getInformations() {
         setLoading(true)
-        await axios.get(http_routes.CURRENT, {
-            params: {
-                q: city
-            }
-        }).then(function (response) {
-            setInformations(response.data)
-            console.log(response.data);
-        }).catch(function (error) {
-            console.log(error);
+         await axios.get(http_routes.CURRENT, {
+             params: {
+                 q: city
+             }
+         }).then(function (response) {
+             setInformations(response.data)
+         }).catch(function () {
+            alert(i18n.t(keys.NOT_FOUND))
         });
         setLoading(false)
 

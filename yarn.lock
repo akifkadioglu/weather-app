@@ -3954,11 +3954,6 @@
     "bignumber.js" "*"
     "lodash" "*"
 
-"i18n-js@3.0.11":
-  "integrity" "sha512-v7dG3kYJTQTyox3NqDabPDE/ZotWntyMI9kh4cYi+XlCSnsIR+KBTS2opPyObL8WndnklcLzbNU92FP/mLge3Q=="
-  "resolved" "https://registry.npmjs.org/i18n-js/-/i18n-js-3.0.11.tgz"
-  "version" "3.0.11"
-
 "iconv-lite@0.4.24":
   "integrity" "sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA=="
   "resolved" "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz"
@@ -5860,13 +5855,6 @@
   "integrity" "sha512-oOanj84fJEXUg9FoEAQomA8ISG+DVIrTZ3qF7m69VQUJyOGYyDZmPqKcjvRku4KXlEH6hWO9i4ACLzNBh8gC0A=="
   "resolved" "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.70.3.tgz"
   "version" "0.70.3"
-
-"react-native-i18n@^2.0.15":
-  "integrity" "sha512-V8VwUP0TLda3oJvgt5tdnFaOV7WXPhTjCTLO7sXI3C2SHggSbD4bCUryMzNJhesimJidH21V2Owvj4zAylHoQQ=="
-  "resolved" "https://registry.npmjs.org/react-native-i18n/-/react-native-i18n-2.0.15.tgz"
-  "version" "2.0.15"
-  dependencies:
-    "i18n-js" "3.0.11"
 
 "react-native-loading-spinner-overlay@^3.0.1":
   "integrity" "sha512-4GdR54HQnKg2HPSSisVizfTLuyhSh4splY9eb8mKiYF1Ihjn/5EmdNo5bN3S7uKPFRC3WLzIZIouX6G6fXfnjw=="

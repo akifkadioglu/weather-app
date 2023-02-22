@@ -21,6 +21,7 @@ export default function App() {
           <Stack.Screen options={HomeOptions} name={routes.HOME} component={Home} />
         </Stack.Navigator>
       </NavigationContainer>
+      
     </>
 
   );
