@@ -4,7 +4,7 @@ import { keys } from "../../locales/keys";
 
 
 export const HomeOptions = {
-    title: i18n.t(keys.HOME_PAGE),
+    title: i18n.t(keys.WEATHER_APP),
     headerStyle: {
         backgroundColor: settings.PRIMARY,
     },

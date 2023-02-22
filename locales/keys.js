@@ -1,7 +1,7 @@
 export const keys = {
     WELCOME:            'welcome',
     FIND:               'find',
-    HOME_PAGE:          'home_page',
+    WEATHER_APP:        'weather_app',
     ENGLISH:            'english',
     TURKISH:            'turkish',
     GERMAN:             'german',

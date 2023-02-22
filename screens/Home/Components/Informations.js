@@ -2,18 +2,17 @@ import { View, Text, Image, Linking } from "react-native";
 import { style } from "../Style";
 import { Feather } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-
-let moment = require('moment');
-import 'moment/locale/tr'
 import { i18n } from "../../../i18n";
 import { keys } from "../../../locales/keys";
 import { TextButtons } from "../../../components/Buttons/Buttons";
+
+let moment = require('moment');
+import 'moment/locale/tr'
 
 export default function Informations(props) {
     function VisitLocation() {
         Linking.openURL('http://maps.google.com/maps?z=12&t=m&q=loc:' + props.informations.location.lat + "," + props.informations.location.lon)
     }
-
     return (
         <View>
             {
@@ -28,7 +27,6 @@ export default function Informations(props) {
                                 />
                                 <Text>{props.informations.current.condition.text}</Text>
                             </View>
-
                         </View>
                         <View style={style.divider} />
                         <Text style={style.content}>{props.informations.location.tz_id}</Text>

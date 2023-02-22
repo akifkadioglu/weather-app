@@ -17,7 +17,6 @@ export const style = StyleSheet.create({
         fontWeight: "400",
         fontSize: 45
     },
-
     content: {
         display:"flex",
         alignItems:"center",

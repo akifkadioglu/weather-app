@@ -3,7 +3,7 @@
     "name": "Weather App",
     "description": "Simple weather app",
     "slug": "weather-app",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -27,7 +27,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "versionCode": 2,
+      "versionCode": 3,
       "package": "com.akifkadioglu.weatherapp"
     },
     "web": {
@@ -38,5 +38,8 @@
         "projectId": "0fbaf84c-a941-4055-b2a5-24bbbeaf42d8"
       }
     }
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-3543901658351927~9118316230"
   }
 }
