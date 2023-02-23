@@ -18,14 +18,25 @@ export const style = StyleSheet.create({
         fontSize: 45
     },
     content: {
-        display:"flex",
-        alignItems:"center",
+        display: "flex",
+        alignItems: "center",
         padding: 15,
         fontWeight: "400",
+        textAlign: "center"
     },
     divider: {
         borderWidth: 0.7,
         borderColor: "#ccc",
         marginHorizontal: 15
+    },
+    center: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    chipStyle: {
+        display: "flex",
+        margin: 10,
+        flexDirection: "row",
     }
 })

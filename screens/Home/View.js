@@ -7,7 +7,6 @@ import { i18n } from "../../i18n";
 import { useEffect, useState } from "react";
 import { InterstitialAd, TestIds, AdEventType } from 'react-native-google-mobile-ads';
 import { env } from "../../env";
-
 import axios from "axios";
 import Informations from "./Components/Informations";
 import Spinner from 'react-native-loading-spinner-overlay';
@@ -33,7 +32,8 @@ export default function Home() {
         setLoading(true)
         await axios.get(http_routes.CURRENT, {
             params: {
-                q: city
+                q: city,
+                lang: i18n.locale
             }
         }).then(function (response) {
             setInformations(response.data)
@@ -57,6 +57,9 @@ export default function Home() {
                     if (loaded) {
                         interstitial.show();
                         setLoaded(false)
+                    }
+                    else {
+                        interstitial.load();
                     }
                 }} />
                 <Informations informations={informations} />
