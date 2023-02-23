@@ -37,7 +37,7 @@ export default function Home() {
             }
         }).then(function (response) {
             setInformations(response.data)
-        }).catch(function () {
+        }).catch(function (err) {
             alert(i18n.t(keys.NOT_FOUND))
         });
         setLoading(false)

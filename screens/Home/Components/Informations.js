@@ -1,4 +1,4 @@
-import { View, Text, Image, Linking } from "react-native";
+import { View, Text, Image, Linking, ScrollView } from "react-native";
 import { style } from "../Style";
 import { Feather } from '@expo/vector-icons';
 import { EvilIcons, Ionicons } from '@expo/vector-icons';
@@ -11,6 +11,7 @@ let moment = require('moment');
 import 'moment/locale/tr'
 
 export default function Informations(props) {
+
     function VisitLocation() {
         Linking.openURL('http://maps.google.com/maps?z=12&t=m&q=loc:' + props.informations.location.lat + "," + props.informations.location.lon)
     }
@@ -38,11 +39,14 @@ export default function Informations(props) {
 
     function WindAndHumidity() {
         return <View style={[{ margin: 10 }, style.navbar]}>
-            <Chip
-                variant="outlined"
-                label={i18n.t(props.informations.current.wind_dir) + " / " + props.informations.current.wind_mph + "mph"}
-                color="red"
-                leading={props => <Feather name="wind" {...props} />} />
+            <ScrollView horizontal={true}>
+                <Chip
+                    variant="outlined"
+                    label={i18n.t(props.informations.current.wind_dir) + " / " + props.informations.current.wind_mph + "mph"}
+                    color="red"
+                    style={{ marginRight: 10 }}
+                    leading={props => <Feather name="wind" {...props} />} />
+            </ScrollView>
             <Chip
                 variant="outlined"
                 label={props.informations.current.humidity.toString()}
@@ -52,29 +56,46 @@ export default function Informations(props) {
     }
 
     function LocationOfPlace() {
-        return <View style={style.chipStyle}>
-            <Chip
-                style={{ marginRight: 20 }}
-                variant="outlined"
-                label={props.informations.location.country}
-                color="black"
-                leading={props => <EvilIcons name="location" size={24} {...props} />} />
-            <Chip
-                variant="outlined"
-                label={props.informations.location.region}
-                color="black" />
+        return <View >
+            <ScrollView horizontal={true}>
+                <View style={style.chipStyle}>
+                    <Chip
+                        style={{ marginRight: 10 }}
+                        variant="outlined"
+                        label={props.informations.location.country}
+                        color="black"
+                        leading={props => <EvilIcons name="location" size={24} {...props} />} />
+                    <Chip
+                        variant="outlined"
+                        label={props.informations.location.region}
+                        color="black" />
+                </View>
+            </ScrollView>
         </View>;
     }
 
     function TimeOfCity() {
+
+        var parts = props.informations.location.localtime.split(" ");
+        var dateParts = parts[0].split("-");
+        var timeParts = parts[1].split(":");
+        var year = parseInt(dateParts[0], 10);
+        var month = parseInt(dateParts[1], 10) - 1;
+        var day = parseInt(dateParts[2], 10);
+        var hour = parseInt(timeParts[0], 10);
+        var minute = parseInt(timeParts[1], 10);
+        var date = new Date(year, month, day, hour, minute);
+
         return <View>
-            <View style={style.chipStyle}>
-                <Chip
-                    variant="outlined"
-                    label={moment(props.informations.location.last_updated_epoch).locale(i18n.locale).format('Do MMMM YYYY, dddd HH:mm').toString()}
-                    color="teal"
-                    leading={props => <Ionicons name="time-outline" size={24} {...props} />} />
-            </View>
+            <ScrollView horizontal={true}>
+                <View style={style.chipStyle}>
+                    <Chip
+                        variant="outlined"
+                        label={moment(date).locale(i18n.locale).format('Do MMMM YYYY, dddd HH:mm').toString()}
+                        color="teal"
+                        leading={props => <Ionicons name="time-outline" size={24} {...props} />} />
+                </View>
+            </ScrollView>
             <View style={style.chipStyle}>
                 <Chip
                     variant="outlined"

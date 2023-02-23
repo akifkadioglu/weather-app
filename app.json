@@ -3,7 +3,7 @@
     "name": "Weather App",
     "description": "Simple weather app",
     "slug": "weather-app",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -27,7 +27,7 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#E7E7E7"
       },
-      "versionCode": 4,
+      "versionCode": 5,
       "package": "com.akifkadioglu.weatherapp"
     },
     "web": {
